@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Data</title>
+</head>
+<body>
+    <h1 style="font-style:italic; padding-left: 40px;">Amir's Survey</h1>
+    {%for i in all_data%}
+    <ul>
+        <li><h3>what is your name - {{i.first}}</h3></li>
+        <li><h3>What is your age - {{i.secound}}</h3></li>
+        <li><h3>What is your address - {{i.third}}</h3></li>
+        <li><h3>In what year you got graduated - {{i.fourth}}</h3></li>
+        <li><h3>Which is the best company for PC - {{i.fifth}}</h3></li>
+    </ul>
+    {%endfor%}
+    <a href="{% url 'home' %}" style="margin: 10px;">EDIT</a>
+    <a href="{% url 'submit' %}">SUBMIT</a>
+</body>
+</html>

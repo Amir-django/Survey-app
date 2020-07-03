@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey</title>
+  <style>
+    li{
+      color: white;
+        }
+    input[type=submit]{
+      cursor: pointer;
+      padding-right: 30px;
+      background-color: black;
+      color: white;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="font-style:italic; padding-left: 40px;">Amir's Survey</h1>
+  <div class="form-div">
+  <form method="POST" action="" class="f_orm">
+    {% csrf_token %}
+    <ul class="enter_details">
+      <label for="first">What is your name</label>
+      <li>{{form.first}}</li><br>
+      <label for="secound">What is your age</label>
+      <li>{{form.secound}}</li><br>
+      <label for="third">What is your address</label>
+      <li>{{form.third}}</li><br>
+      <label for="fourth">In what year you got graduated</label>
+      <li>{{form.fourth}}</li><br>
+      <label for="fifth">Which is the best company for PC</label>
+      <li>{{form.fifth}}</li><br>
+      <input type="submit" value="submit" >
+    </ul>
+    
+  </form>
+  </div>
+</body>
+</html>
